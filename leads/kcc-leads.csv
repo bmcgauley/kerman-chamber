@@ -1,0 +1,23 @@
+org_name,address,city,state,phone,website,email,contact_name,contact_title,google_rating,review_count,lead_score,no_website,preview_url,status,notes
+Huron Chamber of Commerce,,Huron,CA,,,,,,,,95,1,,pending,Very small ag town — likely no site
+San Joaquin Chamber of Commerce,,San Joaquin,CA,,,,,,,,95,1,,pending,Very small town — likely no site
+Orange Cove Chamber of Commerce,,Orange Cove,CA,,,,,,,,90,1,,pending,Small citrus community
+Avenal Chamber of Commerce,,Avenal,CA,,,,,,,,90,1,,pending,Small interior city
+Firebaugh Chamber of Commerce,,Firebaugh,CA,,,,,,,,90,1,,pending,Very small ag town
+Wasco Chamber of Commerce,,Wasco,CA,,,,,,,,85,1,,pending,Agricultural hub — likely basic site
+Shafter Chamber of Commerce,,Shafter,CA,,,,,,,,85,1,,pending,Small Kern County city
+Fowler Chamber of Commerce,,Fowler,CA,,,,,,,,85,1,,pending,Small Fresno County town
+Lemoore District Chamber of Commerce,,Lemoore,CA,,,,,,,,75,1,,pending,Kings County — likely dated site
+Greater Reedley Chamber of Commerce,1070 G St,Reedley,CA,559-638-3548,reedleychamber.com,,,3.8,12,80,0,,pending,GoDaddy builder site — basic template
+Selma District Chamber of Commerce,1821 Tucker St,Selma,CA,559-891-2235,selmaareachamber.com,,,3.7,9,80,0,,pending,Basic site observed previously
+Sanger District Chamber of Commerce,,Sanger,CA,,,,,,,,75,1,,pending,Fresno County — likely outdated
+Corcoran Chamber of Commerce,,Corcoran,CA,,,,,,,,80,1,,pending,Kings County — small city
+Dinuba Chamber of Commerce,,Dinuba,CA,,,,,,8,70,0,,pending,Tulare County
+Kingsburg District Chamber of Commerce,,Kingsburg,CA,,,,,,5,70,0,,pending,Swedish Village area — likely basic site
+Madera Chamber of Commerce,120 N E St,Madera,CA,559-673-3563,maderachamber.com,,,,22,60,0,,pending,WordPress Iconic One — 2014 design needs full refresh
+Hanford Chamber of Commerce,,Hanford,CA,559-582-0483,,,,4.2,9,50,0,,pending,Kings County hub — has some presence
+Tulare Kings Hispanic Chamber,321 W Oak Ave,Visalia,CA,559-734-6020,mytkhcc.org,,,,5.0,7,45,0,,pending,Active but niche org
+Tulare Chamber of Commerce,220 E Tulare Ave,Tulare,CA,559-686-1547,tularechamber.org,,,,4.8,21,40,0,,pending,Reasonably active — lower priority lead
+Coalinga Chamber of Commerce,380 Coalinga Plaza,Coalinga,CA,559-935-2948,coalingachamber.com,,,,31,20,0,,pending,Modern Streamline platform — lower priority
+Fresno Chamber of Commerce,2331 Fresno St,Fresno,CA,559-495-4800,fresnochamber.com,,,,5.0,2,0,0,,benchmark,Top performer — use as design benchmark only
+Kerman Chamber of Commerce,875 S Madera Ave,Kerman,CA,559-846-6343,kermanchamberofcommerce.com,,,,4.2,18,0,0,https://kermanchamber.vercel.app,template_site,Our client — template site
