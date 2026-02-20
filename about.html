@@ -1,0 +1,334 @@
+﻿<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kerman Chamber of Commerce - About Us</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Config -->
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2d00d", // Vibrant Gold
+                        "secondary": "#1a2a3a", // Deep Navy
+                        "background-light": "#F8F4EE", // Warm White
+                        "background-dark": "#1a1a1a", // Dark mode fallback
+                        "text-navy": "#1a2a3a",
+                        "text-gold": "#b08d00", // Darker gold for text readability
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"],
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light text-text-navy antialiased overflow-x-hidden">
+<div class="relative flex min-h-screen w-full flex-col">
+<!-- Sticky Header -->
+<header class="sticky top-0 z-50 flex items-center justify-between border-b border-white/10 bg-secondary px-6 py-4 shadow-md md:px-10">
+<div class="flex items-center gap-4 text-white">
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-2xl">temple_hindu</span>
+</div>
+<h2 class="font-serif text-xl font-bold leading-tight tracking-wide text-white">Kerman Chamber</h2>
+</div>
+<div class="hidden items-center gap-8 md:flex">
+<nav class="flex items-center gap-8">
+<a class="text-sm font-medium text-white/90 transition-colors hover:text-primary" href="index.html">Home</a>
+<a class="text-sm font-medium text-primary" href="about.html">About</a>
+<a class="text-sm font-medium text-white/90 transition-colors hover:text-primary" href="events.html">Events</a>
+<a class="text-sm font-medium text-white/90 transition-colors hover:text-primary" href="#">Directory</a>
+<a class="text-sm font-medium text-white/90 transition-colors hover:text-primary" href="#">News</a>
+</nav>
+<button class="flex h-10 min-w-[100px] cursor-pointer items-center justify-center rounded-lg bg-primary px-6 text-sm font-bold text-secondary transition-transform hover:scale-105 hover:bg-yellow-400">
+                    Join Us
+                </button>
+</div>
+<!-- Mobile Menu Icon -->
+<button class="text-white md:hidden">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<!-- Page Hero -->
+<section class="relative flex w-full flex-col justify-center bg-secondary py-16 text-center md:py-24">
+<div class="layout-content-container mx-auto flex max-w-[960px] flex-col items-center px-4">
+<h1 class="relative font-serif text-4xl font-bold text-white md:text-5xl lg:text-6xl">
+                    Who We Are
+                    <span class="absolute -bottom-4 left-1/2 h-1 w-24 -translate-x-1/2 rounded-full bg-primary"></span>
+</h1>
+</div>
+<!-- Decorative background pattern opacity -->
+<div class="absolute inset-0 z-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5 pointer-events-none"></div>
+</section>
+<!-- Mission & History Split -->
+<section class="mx-auto w-full max-w-7xl px-6 py-16 md:px-10 md:py-24">
+<div class="grid gap-12 lg:grid-cols-12">
+<!-- Left Column: Pull Quote -->
+<div class="lg:col-span-4 lg:border-r lg:border-secondary/10 lg:pr-8">
+<div class="sticky top-24">
+<span class="mb-4 block text-6xl text-primary/40 font-serif">â€œ</span>
+<p class="font-serif text-3xl font-bold italic leading-tight text-secondary md:text-4xl">
+                            Advocating for Kerman Businesses Since 1950
+                        </p>
+<div class="mt-8 h-1 w-16 bg-primary"></div>
+</div>
+</div>
+<!-- Right Column: Content -->
+<div class="flex flex-col gap-6 text-lg leading-relaxed text-slate-700 lg:col-span-8 lg:pl-4">
+<p>
+                        Since 1950, the Kerman Chamber of Commerce has been the unwavering voice of local business. What began as a small collective of shop owners has grown into a powerful engine for economic development, dedicated to advocating for our members and educating the community on the vital importance of local enterprise.
+                    </p>
+<p>
+                        Our mission is threefold: to <strong class="text-secondary">advocate</strong> for policies that foster growth, to <strong class="text-secondary">educate</strong> emerging leaders through mentorship and resources, and to <strong class="text-secondary">connect</strong> business owners with the partners they need to thrive in a free enterprise system.
+                    </p>
+<p>
+                        We believe that a strong business community is the backbone of a vibrant city. By fostering connections and providing resources, we ensure that Kerman remains a place where innovation is welcomed, and hard work is rewarded.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Visual Timeline -->
+<section class="w-full bg-white py-16 md:py-20">
+<div class="mx-auto w-full max-w-7xl px-6 md:px-10">
+<div class="mb-12 text-center">
+<h2 class="font-serif text-3xl font-bold text-secondary md:text-4xl">Our Journey</h2>
+<p class="mt-2 text-slate-600">Milestones that defined our legacy</p>
+</div>
+<div class="relative">
+<!-- Horizontal Line -->
+<div class="absolute top-1/2 left-0 hidden h-0.5 w-full -translate-y-1/2 bg-slate-200 md:block"></div>
+<div class="grid grid-cols-1 gap-8 md:grid-cols-4 md:gap-4">
+<!-- Item 1 -->
+<div class="group relative flex flex-col items-center text-center">
+<div class="relative z-10 mb-4 flex h-4 w-4 items-center justify-center rounded-full bg-primary ring-4 ring-white md:mb-6"></div>
+<h3 class="font-serif text-xl font-bold text-secondary">Founded 1950</h3>
+<p class="mt-2 max-w-[200px] text-sm text-slate-600">The Chamber is established by 12 local merchants.</p>
+</div>
+<!-- Item 2 -->
+<div class="group relative flex flex-col items-center text-center">
+<div class="relative z-10 mb-4 flex h-4 w-4 items-center justify-center rounded-full bg-primary ring-4 ring-white md:mb-6"></div>
+<h3 class="font-serif text-xl font-bold text-secondary">First Annual Event</h3>
+<p class="mt-2 max-w-[200px] text-sm text-slate-600">The community gathers for the inaugural harvest festival.</p>
+</div>
+<!-- Item 3 -->
+<div class="group relative flex flex-col items-center text-center">
+<div class="relative z-10 mb-4 flex h-4 w-4 items-center justify-center rounded-full bg-primary ring-4 ring-white md:mb-6"></div>
+<h3 class="font-serif text-xl font-bold text-secondary">Growth to 200</h3>
+<p class="mt-2 max-w-[200px] text-sm text-slate-600">Membership reaches a major milestone in 1995.</p>
+</div>
+<!-- Item 4 -->
+<div class="group relative flex flex-col items-center text-center">
+<div class="relative z-10 mb-4 flex h-4 w-4 items-center justify-center rounded-full bg-primary ring-4 ring-white md:mb-6"></div>
+<h3 class="font-serif text-xl font-bold text-secondary">Present Day</h3>
+<p class="mt-2 max-w-[200px] text-sm text-slate-600">Leading the region with innovation and advocacy.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Values -->
+<section class="mx-auto w-full max-w-7xl px-6 py-16 md:px-10 md:py-24">
+<div class="mb-12 flex flex-col gap-4">
+<h2 class="font-serif text-3xl font-bold text-secondary md:text-4xl">Core Values</h2>
+<p class="max-w-2xl text-lg text-slate-600">The pillars that guide our service to the community and our members.</p>
+</div>
+<div class="grid gap-6 md:grid-cols-3">
+<!-- Card 1 -->
+<div class="group flex flex-col gap-4 rounded-xl border border-secondary/10 bg-white p-8 shadow-sm transition-all hover:border-primary/50 hover:shadow-md">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-text-gold transition-colors group-hover:bg-primary group-hover:text-secondary">
+<span class="material-symbols-outlined text-3xl">campaign</span>
+</div>
+<div>
+<h3 class="mb-2 font-serif text-xl font-bold text-secondary">Advocacy</h3>
+<p class="text-slate-600">Being the unwavering voice for local business interests in city hall and beyond.</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group flex flex-col gap-4 rounded-xl border border-secondary/10 bg-white p-8 shadow-sm transition-all hover:border-primary/50 hover:shadow-md">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-text-gold transition-colors group-hover:bg-primary group-hover:text-secondary">
+<span class="material-symbols-outlined text-3xl">school</span>
+</div>
+<div>
+<h3 class="mb-2 font-serif text-xl font-bold text-secondary">Education</h3>
+<p class="text-slate-600">Providing resources, workshops, and knowledge for sustainable business growth.</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group flex flex-col gap-4 rounded-xl border border-secondary/10 bg-white p-8 shadow-sm transition-all hover:border-primary/50 hover:shadow-md">
+<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-text-gold transition-colors group-hover:bg-primary group-hover:text-secondary">
+<span class="material-symbols-outlined text-3xl">handshake</span>
+</div>
+<div>
+<h3 class="mb-2 font-serif text-xl font-bold text-secondary">Community</h3>
+<p class="text-slate-600">Fostering deep connections that build a stronger, more resilient Kerman.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Community Impact Stats -->
+<section class="w-full bg-primary py-12 text-secondary">
+<div class="mx-auto w-full max-w-7xl px-6 md:px-10">
+<div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+<div class="flex flex-col items-center text-center">
+<span class="font-serif text-4xl font-bold md:text-5xl">75</span>
+<span class="mt-2 text-sm font-semibold uppercase tracking-wider opacity-80">Years of Service</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="font-serif text-4xl font-bold md:text-5xl">200+</span>
+<span class="mt-2 text-sm font-semibold uppercase tracking-wider opacity-80">Active Members</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="font-serif text-4xl font-bold md:text-5xl">20+</span>
+<span class="mt-2 text-sm font-semibold uppercase tracking-wider opacity-80">Annual Events</span>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="font-serif text-4xl font-bold md:text-5xl">$2M+</span>
+<span class="mt-2 text-sm font-semibold uppercase tracking-wider opacity-80">Local Impact</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Leadership & Board -->
+<section class="mx-auto w-full max-w-7xl px-6 py-16 md:px-10 md:py-24">
+<div class="mb-12 text-center">
+<h2 class="font-serif text-3xl font-bold text-secondary md:text-4xl">Board of Directors</h2>
+<p class="mt-2 text-slate-600">The dedicated leaders guiding our vision.</p>
+</div>
+<div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+<!-- Board Member 1 -->
+<div class="flex flex-col items-center rounded-xl bg-white p-6 text-center shadow-sm ring-1 ring-black/5">
+<div class="relative mb-4 h-24 w-24 overflow-hidden rounded-full border-2 border-primary bg-slate-100">
+<img alt="Professional headshot of a man in a suit smiling confidently" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDkbKz2By2s7QhhFzVMs8YhBl_CwiudvW7QoxI_wjaCxPf5ScGpEl-s4fB7Dok-3dSXD_OhI4v6KkRd_g8slnPfnJvJ1wRcq2f_mLREn6zn67YR0epuvFoFw-sU28Suu0grC0va1iv4-AqkV2GCFu_akdpAX8IRa_bXV-1rjXIItTYb459AYlj6Vce_XvB8odEDsbZeObJluOsoV6TbnszYGisC5hZxXDypVCYqNpW9NHzxA7piLrahaFfyAmA9dV-RA3wecWFNRD5"/>
+</div>
+<h3 class="font-serif text-lg font-bold text-secondary">James Sterling</h3>
+<div class="mt-2 mb-3 h-px w-12 bg-primary"></div>
+<p class="text-sm font-semibold uppercase tracking-wide text-text-gold">President</p>
+</div>
+<!-- Board Member 2 -->
+<div class="flex flex-col items-center rounded-xl bg-white p-6 text-center shadow-sm ring-1 ring-black/5">
+<div class="relative mb-4 h-24 w-24 overflow-hidden rounded-full border-2 border-primary bg-slate-100">
+<img alt="Professional headshot of a woman in business attire looking forward" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQdEP1ZpkxEDqas-uwFxjhQABgjhsnPxEQljyJJ5kNlBQb6TW6TSN4RryTT5vPyYL_-hTkBe9uBzH_Ni65-NpXQcWTjfGscT4LUTSq8qqqbac27g8wGZIuKrfVVMi0O1q0vh1g85yH6EaOQ2O-XC5LLcC0MjRGkZUfWCFmbEA0sZhMtftiM42J0rpjHCujJY-Iu7iTCAl01P1wF025_huvdv0E13OQI_8EwxjBxA4uzczBpxySx8vyZwN6ytIY_n-NHRWGKoydl8tm"/>
+</div>
+<h3 class="font-serif text-lg font-bold text-secondary">Elena Rodriguez</h3>
+<div class="mt-2 mb-3 h-px w-12 bg-primary"></div>
+<p class="text-sm font-semibold uppercase tracking-wide text-text-gold">Vice President</p>
+</div>
+<!-- Board Member 3 -->
+<div class="flex flex-col items-center rounded-xl bg-white p-6 text-center shadow-sm ring-1 ring-black/5">
+<div class="relative mb-4 h-24 w-24 overflow-hidden rounded-full border-2 border-primary bg-slate-100">
+<img alt="Professional headshot of a smiling man with glasses" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoE5JSfSAPRzz5WYpa7eSd2Hf9UKsBcBYXgi9uDfGXHSzjlrAr2O94ESRbI-OZ8PAIR_WfB660E8z1iUMR_k13B6qfm7sah4V4EqPZ4mRPEKIlaojorOLEGpKYDzLgIO5Em9mB013h2IYpCw6qbhrVIIZ3Zk7dbWWTow5HipV0ORK3Val6DCW8LvZh9HG9IAWjGzC-HxJuxU3pFWiPtCNrgGQZwXeyFICmTxmdD0TQ0Vz7J-FG6Xvm2g83vWfvCjLyNcqfp3he7TEh"/>
+</div>
+<h3 class="font-serif text-lg font-bold text-secondary">David Chen</h3>
+<div class="mt-2 mb-3 h-px w-12 bg-primary"></div>
+<p class="text-sm font-semibold uppercase tracking-wide text-text-gold">Treasurer</p>
+</div>
+<!-- Board Member 4 -->
+<div class="flex flex-col items-center rounded-xl bg-white p-6 text-center shadow-sm ring-1 ring-black/5">
+<div class="relative mb-4 h-24 w-24 overflow-hidden rounded-full border-2 border-primary bg-slate-100">
+<img alt="Professional headshot of a young woman smiling" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCW_HOHyKPEQ9wNu0vN42KW_VqzctHJjexLDdnmn8W_SqUboU6b82tF64PyHCXHgxO4ssXqu47UnrlR9E_nfY1avX7QRMtX-g2A7ECn8IQGqgo91Lxzj3zcMKKabHvAg50lPmD0qMMqAsLlJpRmkOMt61MS25RQtyt1Dqzilo4ynRvyJLJ8ft-0ZKf4r03RkZXlbb_0mMvyE9R0xE2pjgtVPrzqk_K9sguBlHKb0xTz6J-6b1Tl7aBEPFWlNXwUNaRvdcLb1b-5gSX6"/>
+</div>
+<h3 class="font-serif text-lg font-bold text-secondary">Sarah Miller</h3>
+<div class="mt-2 mb-3 h-px w-12 bg-primary"></div>
+<p class="text-sm font-semibold uppercase tracking-wide text-text-gold">Secretary</p>
+</div>
+<!-- Board Member 5 -->
+<div class="flex flex-col items-center rounded-xl bg-white p-6 text-center shadow-sm ring-1 ring-black/5">
+<div class="relative mb-4 h-24 w-24 overflow-hidden rounded-full border-2 border-primary bg-slate-100">
+<img alt="Professional headshot of a middle-aged man outdoors" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC8kmCUgfyxl9uZqgUsJ9pjwx8AFKg6PZfewzPmv7T-_WfAdryVfc-CrwXD4y_FS0We-cEDO0XBvXFYyFI6DjUY-tzWWkUVGv8t-1TrqUT3Cx4uGq_TLuWY2b3xKusRX_79urZFkgA8UwDpaEPA53EgWPQTT6mQ6NsqYHk9rTtQSgY-TIYMCHI_OLpw2_OmbEF6vlBh2mF_bLzFd0TmNNptSKxe6AdCN45cKXpSg-YpNbXrqZ0_GmDRvphLhaXqx1uLJxp7FFnpgOk"/>
+</div>
+<h3 class="font-serif text-lg font-bold text-secondary">Robert Thorne</h3>
+<div class="mt-2 mb-3 h-px w-12 bg-primary"></div>
+<p class="text-sm font-semibold uppercase tracking-wide text-text-gold">Board Member</p>
+</div>
+<!-- Board Member 6 -->
+<div class="flex flex-col items-center rounded-xl bg-white p-6 text-center shadow-sm ring-1 ring-black/5">
+<div class="relative mb-4 h-24 w-24 overflow-hidden rounded-full border-2 border-primary bg-slate-100">
+<img alt="Professional headshot of a woman laughing during a meeting" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDha3i6o4i8IoW-dSXWUw3yK2UQ1k0qlOBL6f5-shYfKreV0mKlm5CVDkeUWmdWgPQ47V-Qo1lts3FayliyqM-ZFzQVYtSh9P1iv4-fE-sxo3SZY3AbVTYHDzoGNcc76BJX--acSd5aNYTqY883_90PPCCujL74c3YMXL5jAq-WegQ-f3vM30cWeavHlgOAm9YKq9Vs3jZJSWwEg8P0RArjXtWhFANTi6Gv7tzp502Y0mCn2Y1p1vaIcIRZeB_HS0xkkhDf5dnroB34"/>
+</div>
+<h3 class="font-serif text-lg font-bold text-secondary">Anita Patel</h3>
+<div class="mt-2 mb-3 h-px w-12 bg-primary"></div>
+<p class="text-sm font-semibold uppercase tracking-wide text-text-gold">Board Member</p>
+</div>
+</div>
+</section>
+<!-- Join CTA Banner -->
+<section class="relative w-full overflow-hidden bg-secondary px-6 py-20 text-center md:px-10">
+<div class="relative z-10 mx-auto flex max-w-3xl flex-col items-center gap-6">
+<h2 class="font-serif text-4xl font-bold text-primary md:text-5xl">Become Part of Something Bigger</h2>
+<p class="text-lg text-white/90">Join over 200 local businesses working together to build a prosperous Kerman. Your membership is an investment in our community's future.</p>
+<button class="mt-4 flex min-w-[160px] cursor-pointer items-center justify-center rounded-lg bg-primary px-8 py-4 text-base font-bold text-secondary shadow-lg transition-transform hover:scale-105 hover:bg-yellow-400">
+                    Join Now
+                </button>
+</div>
+<!-- Decorative Abstract Background -->
+<div class="absolute inset-0 z-0 opacity-10">
+<div class="h-full w-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary to-secondary"></div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-secondary pt-16 pb-8 text-white border-t border-white/10">
+<div class="mx-auto flex w-full max-w-7xl flex-col px-6 md:px-10">
+<div class="flex flex-wrap justify-between gap-10">
+<div class="flex max-w-sm flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="flex h-8 w-8 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-xl">temple_hindu</span>
+</div>
+<span class="font-serif text-xl font-bold">Kerman Chamber</span>
+</div>
+<p class="text-sm leading-relaxed text-slate-400">
+                            Advocating for businesses, promoting growth, and fostering community connections since 1950.
+                        </p>
+</div>
+<div class="flex flex-wrap gap-12 md:gap-24">
+<div class="flex flex-col gap-3">
+<h4 class="font-serif text-lg font-bold text-primary">Quick Links</h4>
+<a class="text-sm text-slate-300 hover:text-white" href="index.html">Home</a>
+<a class="text-sm text-slate-300 hover:text-white" href="about.html">About Us</a>
+<a class="text-sm text-slate-300 hover:text-white" href="members.html">Membership</a>
+<a class="text-sm text-slate-300 hover:text-white" href="events.html">Events</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-serif text-lg font-bold text-primary">Contact</h4>
+<a class="flex items-center gap-2 text-sm text-slate-300 hover:text-white" href="mailto:info@kermanchamber.com">
+<span class="material-symbols-outlined text-sm">mail</span> info@kermanchamber.com
+                            </a>
+<span class="flex items-center gap-2 text-sm text-slate-300">
+<span class="material-symbols-outlined text-sm">call</span> (555) 123-4567
+                            </span>
+<span class="flex items-center gap-2 text-sm text-slate-300">
+<span class="material-symbols-outlined text-sm">location_on</span> 123 Main St, Kerman, CA
+                            </span>
+</div>
+</div>
+</div>
+<div class="mt-16 border-t border-white/10 pt-8 text-center text-xs text-slate-500">
+                    Â© 2025 Kerman Chamber of Commerce. All rights reserved.
+                </div>
+</div>
+</footer>
+</div>
+</body></html>

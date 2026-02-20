@@ -1,0 +1,296 @@
+﻿<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us - Kerman Chamber of Commerce</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2d00d",
+                        "primary-hover": "#dcb900",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#221f10",
+                        "navy": "#1e293b", // Adding a specific navy for the request if needed, or mapping to background-dark
+                        "warm-white": "#F8F4EF",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d4d4d4;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a8a8a8;
+        }
+    </style>
+</head>
+<body class="bg-warm-white text-slate-900 font-display antialiased overflow-x-hidden flex flex-col min-h-screen">
+<!-- Sticky Header -->
+<header class="sticky top-0 z-50 w-full bg-background-dark text-white shadow-md">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<!-- Logo Area -->
+<div class="flex items-center gap-3">
+<div class="size-10 text-primary">
+<svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 4C12.95 4 4 12.95 4 24H44C44 12.95 35.05 4 24 4Z" fill="currentColor" fill-opacity="0.2"></path>
+<path d="M24 8C15.16 8 8 15.16 8 24H40C40 15.16 32.84 8 24 8Z" fill="currentColor"></path>
+<path d="M4 24C4 35.05 12.95 44 24 44C35.05 44 44 35.05 44 24H4Z" stroke="currentColor" stroke-width="4"></path>
+</svg>
+</div>
+<span class="text-white text-lg font-bold font-serif tracking-wide leading-tight">Kerman Chamber<br/><span class="text-primary text-sm font-normal font-display tracking-normal">of Commerce</span></span>
+</div>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-200 hover:text-primary text-sm font-medium transition-colors" href="index.html">Home</a>
+<a class="text-slate-200 hover:text-primary text-sm font-medium transition-colors" href="about.html">About</a>
+<a class="text-slate-200 hover:text-primary text-sm font-medium transition-colors" href="events.html">Events</a>
+<a class="text-slate-200 hover:text-primary text-sm font-medium transition-colors" href="#">Directory</a>
+<a class="inline-flex items-center justify-center px-6 py-2.5 border border-transparent text-sm font-bold rounded-lg shadow-sm text-background-dark bg-primary hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all" href="#">
+                        Join Us
+                    </a>
+</nav>
+<!-- Mobile Menu Button -->
+<button class="md:hidden text-slate-200 hover:text-white" type="button">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Page Hero -->
+<section class="relative bg-background-dark py-16 sm:py-24">
+<div class="absolute inset-0 overflow-hidden">
+<!-- Abstract background pattern -->
+<div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&amp;w=2301&amp;auto=format&amp;fit=crop')] bg-cover bg-center opacity-10" data-alt="Abstract office architecture background pattern"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/80 to-transparent"></div>
+</div>
+<div class="relative max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h1 class="text-4xl md:text-5xl font-bold text-white font-serif mb-4">Get In Touch</h1>
+<div class="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+<p class="mt-6 text-lg text-slate-300 max-w-2xl mx-auto">
+                We'd love to hear from you. Whether you have a question about membership, events, or just want to say hello, our team is ready to answer all your questions.
+            </p>
+</div>
+</section>
+<!-- Main Content: Form & Details -->
+<main class="flex-grow py-16 px-4 sm:px-6 lg:px-8 max-w-[1280px] mx-auto w-full">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+<!-- Left Column: Contact Form -->
+<div class="lg:col-span-7">
+<div class="bg-white rounded-xl shadow-lg border border-slate-100 p-8 sm:p-10">
+<h2 class="text-3xl font-serif font-bold text-slate-900 mb-2">Send Us a Message</h2>
+<p class="text-slate-500 mb-8">Fill out the form below and we'll get back to you shortly.</p>
+<form class="space-y-6">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<label class="block">
+<span class="text-sm font-semibold text-slate-700 mb-1 block">Full Name</span>
+<input class="w-full rounded-lg border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 focus:border-primary focus:ring-primary focus:bg-white transition-colors placeholder:text-slate-400" placeholder="John Doe" type="text"/>
+</label>
+<label class="block">
+<span class="text-sm font-semibold text-slate-700 mb-1 block">Email Address</span>
+<input class="w-full rounded-lg border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 focus:border-primary focus:ring-primary focus:bg-white transition-colors placeholder:text-slate-400" placeholder="john@example.com" type="email"/>
+</label>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<label class="block">
+<span class="text-sm font-semibold text-slate-700 mb-1 block">Phone Number</span>
+<input class="w-full rounded-lg border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 focus:border-primary focus:ring-primary focus:bg-white transition-colors placeholder:text-slate-400" placeholder="(555) 123-4567" type="tel"/>
+</label>
+<label class="block">
+<span class="text-sm font-semibold text-slate-700 mb-1 block">Subject</span>
+<select class="w-full rounded-lg border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 focus:border-primary focus:ring-primary focus:bg-white transition-colors">
+<option>General Inquiry</option>
+<option>Membership</option>
+<option>Events &amp; Sponsorship</option>
+<option>Press &amp; Media</option>
+</select>
+</label>
+</div>
+<label class="block">
+<span class="text-sm font-semibold text-slate-700 mb-1 block">Message</span>
+<textarea class="w-full rounded-lg border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 focus:border-primary focus:ring-primary focus:bg-white transition-colors placeholder:text-slate-400 resize-none" placeholder="How can we help you?" rows="5"></textarea>
+</label>
+<button class="inline-flex justify-center items-center w-full sm:w-auto px-8 py-3.5 bg-primary hover:bg-primary-hover text-background-dark font-bold rounded-lg transition-all transform active:scale-95 shadow-md" type="button">
+                            Send Message
+                            <span class="material-symbols-outlined ml-2 text-xl">send</span>
+</button>
+</form>
+</div>
+</div>
+<!-- Right Column: Contact Details -->
+<div class="lg:col-span-5 flex flex-col justify-center">
+<div class="pl-0 lg:pl-8 space-y-10">
+<div>
+<h3 class="text-2xl font-serif font-bold text-slate-900 mb-6">Contact Information</h3>
+<div class="space-y-6">
+<!-- Address -->
+<div class="flex items-start group">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary-hover group-hover:bg-primary group-hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div class="ml-4">
+<p class="text-sm font-medium text-slate-500 uppercase tracking-wider">Our Office</p>
+<p class="mt-1 text-lg font-medium text-slate-900">875 S. Madera Ave</p>
+<p class="text-lg font-medium text-slate-900">Kerman, CA 93630</p>
+</div>
+</div>
+<!-- Phone -->
+<div class="flex items-start group">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary-hover group-hover:bg-primary group-hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div class="ml-4">
+<p class="text-sm font-medium text-slate-500 uppercase tracking-wider">Phone</p>
+<div class="mt-1 space-y-1">
+<p class="text-lg font-medium text-slate-900 hover:text-primary transition-colors cursor-pointer"><span class="text-slate-400 text-sm font-normal mr-2">Office:</span>(559) 846-6352</p>
+<p class="text-lg font-medium text-slate-900 hover:text-primary transition-colors cursor-pointer"><span class="text-slate-400 text-sm font-normal mr-2">Cell:</span>(559) 555-0199</p>
+</div>
+</div>
+</div>
+<!-- Email -->
+<div class="flex items-start group">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary-hover group-hover:bg-primary group-hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div class="ml-4">
+<p class="text-sm font-medium text-slate-500 uppercase tracking-wider">Email</p>
+<p class="mt-1 text-lg font-medium text-slate-900 hover:text-primary transition-colors cursor-pointer">executive.director@kermanchamber.org</p>
+</div>
+</div>
+<!-- Hours -->
+<div class="flex items-start group">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary-hover group-hover:bg-primary group-hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div class="ml-4">
+<p class="text-sm font-medium text-slate-500 uppercase tracking-wider">Office Hours</p>
+<p class="mt-1 text-lg font-medium text-slate-900">Mon - Fri: 9:00 AM - 5:00 PM</p>
+<p class="text-base text-slate-500">Sat - Sun: Closed</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Social Media -->
+<div class="pt-8 border-t border-slate-200">
+<h4 class="text-lg font-semibold text-slate-900 mb-4">Follow Us</h4>
+<div class="flex gap-4">
+<a class="flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-lg hover:border-primary hover:text-primary transition-all shadow-sm group" href="#">
+<svg aria-hidden="true" class="w-5 h-5 text-slate-600 group-hover:text-primary transition-colors" fill="currentColor" viewbox="0 0 24 24">
+<path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path>
+</svg>
+<span class="font-medium text-slate-700 group-hover:text-primary">Facebook</span>
+</a>
+<a class="flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-lg hover:border-primary hover:text-primary transition-all shadow-sm group" href="#">
+<svg aria-hidden="true" class="w-5 h-5 text-slate-600 group-hover:text-primary transition-colors" fill="currentColor" viewbox="0 0 24 24">
+<path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772 4.902 4.902 0 011.772-1.153c.636-.247 1.363-.416 2.427-.465C9.673 2.013 10.03 2 12.484 2h.231zm-2.486 9.85v.005a3.292 3.292 0 005.358 2.506 3.284 3.284 0 00.999-2.508 3.292 3.292 0 00-4.665-2.915 3.284 3.284 0 00-1.692 2.911zm6.59-4.832a1.285 1.285 0 11-2.57 0 1.285 1.285 0 012.57 0zM12.403 3.996h-.232c-2.415 0-2.738.01-3.693.054-.954.044-1.472.195-1.815.328a3.666 3.666 0 00-1.332.866 3.66 3.66 0 00-.866 1.332c-.133.343-.284.861-.328 1.815-.044.954-.055 1.278-.055 3.73v.156c0 2.452.01 2.776.054 3.73.045.954.196 1.472.329 1.815.25.64.636 1.144 1.152 1.66.516.517 1.02.903 1.66 1.153.343.133.861.284 1.815.328.954.044 1.278.055 3.73.055h.156c2.452 0 2.776-.011 3.73-.055.954-.044 1.472-.195 1.815-.328a3.654 3.654 0 001.332-.866 3.666 3.666 0 00.866-1.332c.133-.343.284-.861.328-1.815.044-.954.055-1.278.055-3.73v-.156c0-2.452-.01-2.776-.055-3.73-.044-.954-.195-1.472-.328-1.815a3.666 3.666 0 00-.866-1.332 3.66 3.66 0 00-1.332-.866c-.343-.133-.861-.284-1.815-.328-.954-.044-1.278-.055-3.73-.055z" fill-rule="evenodd"></path>
+</svg>
+<span class="font-medium text-slate-700 group-hover:text-primary">Instagram</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Map Section -->
+<section class="w-full">
+<div class="bg-background-dark py-6 px-4">
+<h2 class="text-center text-white font-serif text-2xl font-bold tracking-wide">Find Us In Kerman</h2>
+</div>
+<div class="w-full h-96 relative bg-slate-200">
+<!-- Google Map Placeholder -->
+<div class="absolute inset-0 bg-cover bg-center grayscale opacity-80" data-alt="Map view of Kerman city streets and layout" data-location="Kerman, California" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAoDWkYRq6qIGAU9sRjGK-trNU5MNgg9GHUglElKH5DaWONcLeoAHIHaZ8RQXxjcmIeFargzx_K_aCQeuEr9JokjmMCK1nEMbWUl9tCW8XVRamTbtaaW3eWyz5Xf4Y-2mIr6NBE4gnfMBoJYQiSTN-nJoXemUvGltfQzKDv0Ra9y0k5vcaiZwCmG2awCp1mdA70fZyatfblpXVmWSaw_3BfUo4usIR_YSZxn1DUdN65XCyFT3xySx-o7_sEW6CfEINmF1ghvCpwzqeN');"></div>
+<!-- Map Overlay Interaction Hint -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="bg-white/90 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg border border-slate-200 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">pin_drop</span>
+<span class="font-bold text-background-dark">875 S. Madera Ave, Kerman, CA</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Membership CTA -->
+<section class="bg-white py-16 border-t border-slate-100">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+<div class="bg-warm-white rounded-2xl p-8 md:p-12 border border-orange-100 flex flex-col md:flex-row items-center justify-between gap-8 shadow-sm">
+<div>
+<h2 class="text-3xl font-serif font-bold text-slate-900 mb-2">Interested in joining?</h2>
+<p class="text-slate-600 max-w-xl">Become a member of the Kerman Chamber of Commerce today and start growing your business with our community support.</p>
+</div>
+<div class="flex-shrink-0">
+<button class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-bold rounded-lg text-background-dark bg-primary hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary shadow-lg transition-all">
+                        Membership Info
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-background-dark text-slate-400 py-12 border-t border-slate-800">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+<div class="col-span-1 md:col-span-2">
+<div class="flex items-center gap-2 mb-4 text-white">
+<div class="size-8 text-primary">
+<svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 4C12.95 4 4 12.95 4 24H44C44 12.95 35.05 4 24 4Z" fill="currentColor" fill-opacity="0.2"></path>
+<path d="M24 8C15.16 8 8 15.16 8 24H40C40 15.16 32.84 8 24 8Z" fill="currentColor"></path>
+</svg>
+</div>
+<span class="font-serif font-bold text-xl">Kerman Chamber</span>
+</div>
+<p class="max-w-xs text-sm leading-relaxed">
+                        Serving the business community of Kerman, California. We are dedicated to economic growth and community vitality.
+                    </p>
+</div>
+<div>
+<h3 class="text-white font-bold mb-4">Quick Links</h3>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-primary transition-colors" href="index.html">Home</a></li>
+<li><a class="hover:text-primary transition-colors" href="about.html">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Directory</a></li>
+<li><a class="text-white/70 hover:text-accent text-sm transition-colors" href="events.html">Events Calendar</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-white font-bold mb-4">Contact</h3>
+<ul class="space-y-2 text-sm">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">call</span> (559) 846-6352</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">mail</span> executive.director@kermanchamber.org</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-base">location_on</span> 875 S. Madera Ave</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs">
+<p>Â© 2026 Kerman Chamber of Commerce. All rights reserved.</p>
+<div class="flex gap-4 mt-4 md:mt-0">
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
