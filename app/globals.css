@@ -1,28 +1,17 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer base {
-  :root {
-    --font-inter: 'Inter', system-ui, sans-serif;
-    --font-playfair: 'Playfair Display', Georgia, serif;
-  }
+@theme {
+  /* Brand colors */
+  --color-primary: #1A2E4A;
+  --color-primary-dark: #0f1d2e;
+  --color-accent: #C8971A;
+  --color-accent-hover: #b07f10;
+  --color-bg-light: #F8F4EE;
 
-  .font-display {
-    font-family: var(--font-playfair);
-  }
+  /* Typography — references next/font CSS vars set in layout.js */
+  --font-family-display: var(--font-playfair, "Playfair Display", Georgia, serif);
+  --font-family-body: var(--font-inter, Inter, system-ui, sans-serif);
 
-  .font-body {
-    font-family: var(--font-inter);
-  }
-}
-
-@layer utilities {
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-  .no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
+  /* Custom shadow */
+  --shadow-accent-glow: 0 4px 24px rgba(200, 151, 26, 0.25);
 }
