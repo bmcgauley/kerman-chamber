@@ -20,7 +20,7 @@ export default function CTASection({ headline, subtext, buttonLabel, href = "/me
                 )}
                 <Link
                     href={href}
-                    className="bg-accent hover:bg-accent-hover text-primary font-bold text-lg py-4 px-10 rounded-lg shadow-lg transition-transform hover:scale-105 inline-block"
+                    className="bg-accent hover:bg-accent-hover text-primary font-bold text-lg py-4 px-10 rounded-lg shadow-lg transition-transform hover:scale-105 inline-block cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
                 >
                     {buttonLabel}
                 </Link>

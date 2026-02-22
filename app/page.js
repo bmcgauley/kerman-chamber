@@ -4,6 +4,7 @@ import EventCard from "@/components/EventCard";
 import MemberCard from "@/components/MemberCard";
 import CTASection from "@/components/CTASection";
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/config/site";
 
 export const metadata = {
@@ -19,8 +20,8 @@ export default function HomePage() {
             <Hero />
             <StatsBar />
 
-            {/* About Snippet */}
-            <section className="py-24 bg-bg-light">
+            {/* About Snippet — 2.5-B1/B2: font-display h2, 2.5-C3: mobile image constrained, 2.5-E2: next/image, 2.5-D6: ARIA */}
+            <section className="py-24 bg-bg-light" aria-labelledby="about-heading">
                 <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col lg:flex-row gap-16 items-center">
                         <div className="lg:w-1/2 order-2 lg:order-1">
@@ -30,18 +31,21 @@ export default function HomePage() {
                                     Our Mission
                                 </span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-display font-bold text-primary mb-6 leading-tight">
+                            <h2
+                                id="about-heading"
+                                className="text-4xl md:text-5xl font-display font-bold text-primary mb-6 leading-tight"
+                            >
                                 {siteConfig.aboutSnippet.headline}
                             </h2>
-                            <p className="text-slate-600 text-lg leading-relaxed mb-6 font-light">
+                            <p className="text-text-muted text-lg leading-relaxed mb-6 font-light">
                                 {siteConfig.aboutSnippet.body1}
                             </p>
-                            <p className="text-slate-600 text-lg leading-relaxed mb-8 font-light">
+                            <p className="text-text-muted text-lg leading-relaxed mb-8 font-light">
                                 {siteConfig.aboutSnippet.body2}
                             </p>
                             <Link
                                 href="/about"
-                                className="inline-flex items-center gap-2 text-primary font-bold hover:text-accent transition-colors group"
+                                className="inline-flex items-center gap-2 text-primary font-bold hover:text-accent transition-colors group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm"
                             >
                                 Learn More About Us
                                 <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">
@@ -53,10 +57,15 @@ export default function HomePage() {
                             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                                 <div className="absolute -top-4 -right-4 w-24 h-24 bg-accent/20 rounded-full z-0" />
                                 <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-primary/10 rounded-full z-0" />
-                                <img
+                                {/* 2.5-E2 next/image; 2.5-C3 mobile max-h constraint */}
+                                <Image
                                     src={siteConfig.aboutSnippet.image}
                                     alt={siteConfig.aboutSnippet.imageAlt}
-                                    className="relative z-10 w-full h-[500px] object-cover hover:scale-105 transition-transform duration-700"
+                                    width={800}
+                                    height={500}
+                                    className="relative z-10 w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover hover:scale-105 transition-transform duration-700"
+                                    loading="lazy"
+                                    sizes="(max-width: 768px) 100vw, 50vw"
                                 />
                             </div>
                         </div>
@@ -64,21 +73,24 @@ export default function HomePage() {
                 </div>
             </section>
 
-            {/* Upcoming Events Preview */}
-            <section className="py-24 bg-white relative">
+            {/* Upcoming Events Preview — 2.5-B1/B2: heading scale, 2.5-D6: ARIA */}
+            <section className="py-24 bg-white relative" aria-labelledby="events-heading">
                 <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-end mb-12">
                         <div>
-                            <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-2">
+                            <h2
+                                id="events-heading"
+                                className="text-4xl md:text-5xl font-display font-bold text-primary mb-2"
+                            >
                                 Upcoming Events
                             </h2>
-                            <p className="text-slate-500">
+                            <p className="text-text-muted">
                                 Connect, learn, and grow with the community.
                             </p>
                         </div>
                         <Link
                             href="/events"
-                            className="hidden sm:inline-block text-primary font-bold hover:text-accent transition-colors"
+                            className="hidden sm:inline-block text-primary font-bold hover:text-accent transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm"
                         >
                             View All Calendar →
                         </Link>
@@ -91,7 +103,7 @@ export default function HomePage() {
                     <div className="mt-8 text-center sm:hidden">
                         <Link
                             href="/events"
-                            className="inline-block text-primary font-bold hover:text-accent transition-colors"
+                            className="inline-block text-primary font-bold hover:text-accent transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm"
                         >
                             View All Calendar →
                         </Link>
@@ -99,11 +111,14 @@ export default function HomePage() {
                 </div>
             </section>
 
-            {/* Member Spotlight */}
-            <section className="py-20 bg-slate-50 border-t border-slate-200">
+            {/* Member Spotlight — 2.5-B1/B2: heading, 2.5-D6: ARIA */}
+            <section className="py-20 bg-slate-50 border-t border-slate-200" aria-labelledby="spotlight-heading">
                 <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
-                        <h2 className="text-3xl font-display font-bold text-primary mb-4">
+                        <h2
+                            id="spotlight-heading"
+                            className="text-4xl md:text-5xl font-display font-bold text-primary mb-4"
+                        >
                             Member Spotlight
                         </h2>
                         <div className="w-20 h-1 bg-accent mx-auto" />

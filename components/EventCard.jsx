@@ -51,7 +51,7 @@ export default function EventCard({ event }) {
                                 <span>{location}</span>
                             </div>
                             <div className="flex-grow" />
-                            <button className="flex items-center justify-center rounded-full h-12 px-8 bg-accent text-primary text-sm font-bold hover:bg-accent-hover transition-all shadow-lg">
+                            <button className="flex items-center justify-center rounded-full h-12 px-8 bg-accent text-primary text-sm font-bold hover:bg-accent-hover transition-all shadow-lg cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent">
                                 Register Now
                             </button>
                         </div>
@@ -99,7 +99,7 @@ export default function EventCard({ event }) {
                         </span>
                     </div>
                 </div>
-                <button className="w-full border-2 border-primary text-primary hover:bg-primary hover:text-white font-bold py-2.5 rounded-full transition-colors mt-4 text-sm">
+                <button className="w-full border-2 border-primary text-primary hover:bg-primary hover:text-white font-bold py-2.5 rounded-full transition-colors mt-4 text-sm cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
                     Learn More &amp; Register
                 </button>
             </div>

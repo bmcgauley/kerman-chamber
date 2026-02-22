@@ -4,7 +4,7 @@ import { siteConfig } from "@/config/site";
 export default function Hero() {
     const { hero } = siteConfig;
     return (
-        <section className="relative h-[90vh] min-h-[600px] flex items-center justify-center overflow-hidden">
+        <section className="relative min-h-[500px] sm:h-[90vh] sm:min-h-[600px] flex items-center justify-center overflow-hidden">
             {/* Background Image + Overlay */}
             <div
                 className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
@@ -27,13 +27,13 @@ export default function Hero() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <Link
                         href={hero.ctaPrimary.href}
-                        className="w-full sm:w-auto bg-accent hover:bg-accent-hover text-primary font-bold text-lg py-4 px-8 rounded-lg transition-all shadow-lg hover:shadow-accent-glow"
+                        className="w-full sm:w-auto bg-accent hover:bg-accent-hover text-primary font-bold text-lg py-4 px-8 rounded-lg transition-all shadow-lg hover:shadow-accent-glow cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
                     >
                         {hero.ctaPrimary.label}
                     </Link>
                     <Link
                         href={hero.ctaSecondary.href}
-                        className="w-full sm:w-auto bg-transparent border-2 border-white hover:bg-white hover:text-primary text-white font-bold text-lg py-4 px-8 rounded-lg transition-all"
+                        className="w-full sm:w-auto bg-transparent border-2 border-white hover:bg-white hover:text-primary text-white font-bold text-lg py-4 px-8 rounded-lg transition-all cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
                     >
                         {hero.ctaSecondary.label}
                     </Link>

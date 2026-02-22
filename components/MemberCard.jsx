@@ -19,10 +19,10 @@ export default function MemberCard({ member, variant = "spotlight" }) {
                     {tier && (
                         <span
                             className={`flex-shrink-0 text-xs font-bold px-2 py-1 rounded-full ${tier === "Premier"
-                                    ? "bg-accent/20 text-yellow-800"
-                                    : tier === "Business Builder"
-                                        ? "bg-primary/10 text-primary"
-                                        : "bg-slate-100 text-slate-600"
+                                ? "bg-accent/20 text-yellow-800"
+                                : tier === "Business Builder"
+                                    ? "bg-primary/10 text-primary"
+                                    : "bg-slate-100 text-slate-600"
                                 }`}
                         >
                             {tier}
@@ -52,7 +52,7 @@ export default function MemberCard({ member, variant = "spotlight" }) {
             <h3 className="text-lg font-bold text-primary font-display">{name}</h3>
             <p className="text-accent text-sm font-medium mb-4">{category}</p>
             <p className="text-slate-500 text-sm mb-4">{description}</p>
-            <a href="#" className="text-primary text-sm font-bold hover:underline">
+            <a href="#" className="text-primary text-sm font-bold hover:underline cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm">
                 View Profile
             </a>
         </div>
