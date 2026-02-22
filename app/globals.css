@@ -54,3 +54,35 @@
 .reveal.visible {
   animation: fadeInUp 0.6s ease forwards;
 }
+
+/* ── KCCButton: resting text colors + hover inversion ── */
+
+/* Primary: gold bg, navy text → navy blob fills → text goes gold */
+.kcc-btn[data-variant="primary"] {
+  color: var(--color-primary);
+  transition: color 0.3s;
+}
+
+.kcc-btn[data-variant="primary"]:hover {
+  color: var(--color-accent);
+}
+
+/* Outline (dark bg): white border/text → white blob fills → text goes navy */
+.kcc-btn[data-variant="outline"] {
+  color: white;
+  transition: color 0.3s;
+}
+
+.kcc-btn[data-variant="outline"]:hover {
+  color: var(--color-primary);
+}
+
+/* Outline-dark (light bg): navy border/text → navy blob fills → text goes white */
+.kcc-btn[data-variant="outline-dark"] {
+  color: var(--color-primary);
+  transition: color 0.3s;
+}
+
+.kcc-btn[data-variant="outline-dark"]:hover {
+  color: white;
+}

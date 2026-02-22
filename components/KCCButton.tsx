@@ -2,17 +2,12 @@
  * KCCButton — KCC-branded wrapper around the 21st.dev InteractiveHoverButton.
  *
  * Variants:
- *   primary      — gold background, navy text, navy hover-fill blob
- *   outline      — transparent bg, white border (for dark bg usage)
- *   outline-dark — transparent bg, navy border (for light bg usage)
+ *   primary      — gold bg, navy text → on hover: navy blob, gold text
+ *   outline      — transparent, white border/text → on hover: white blob, navy text
+ *   outline-dark — transparent, navy border/text → on hover: navy blob, white text
  *
- * IMPORTANT: Uses Tailwind named group `group/btn` so hover animation only
- * fires when the BUTTON itself is hovered — not when a parent card is hovered.
- *
- * Usage:
- *   <KCCButton href="/members">Join Us</KCCButton>
- *   <KCCButton variant="outline" href="/events">View Events</KCCButton>
- *   <KCCButton onClick={handleClick}>Submit</KCCButton>
+ * Uses data-variant + CSS in globals for hover text inversion (Tailwind v4 safe).
+ * Uses group/btn named group so card-level hover does NOT trigger button animation.
  */
 
 "use client";
@@ -33,16 +28,15 @@ type KCCButtonProps =
     | (KCCButtonBaseProps & { href: string; onClick?: never } & Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, "href">)
     | (KCCButtonBaseProps & { href?: never; onClick?: React.MouseEventHandler<HTMLButtonElement> } & Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "onClick">);
 
-// blob and text values must NOT use group-hover — those are set inline with named group
 const variantWrapper: Record<KCCButtonVariant, string> = {
-    primary: "border-accent bg-accent text-primary",
-    outline: "border-white bg-transparent text-white",
-    "outline-dark": "border-primary bg-transparent text-primary",
+    primary:        "border-accent bg-accent",
+    outline:        "border-white bg-transparent",
+    "outline-dark": "border-primary bg-transparent",
 };
 
 const variantBlob: Record<KCCButtonVariant, string> = {
-    primary: "bg-primary",
-    outline: "bg-white",
+    primary:        "bg-primary",
+    outline:        "bg-white",
     "outline-dark": "bg-primary",
 };
 
@@ -55,27 +49,28 @@ export function KCCButton({
 }: KCCButtonProps) {
     const inner = (
         <span
+            data-variant={variant}
             className={cn(
-                // Named group "btn" — hover only fires for THIS element, not parent cards
-                "group/btn relative flex items-center justify-center cursor-pointer overflow-hidden rounded-lg border-2 font-bold transition-colors duration-300",
+                "kcc-btn group/btn relative flex items-center justify-center cursor-pointer",
+                "overflow-hidden rounded-lg border-2 font-bold",
                 "px-8 py-4 text-lg",
-                variantWrapper[variant],
                 "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary",
+                variantWrapper[variant],
                 className
             )}
         >
-            {/* Resting label — slides right on hover */}
-            <span className="relative z-10 inline-block transition-all duration-300 group-hover/btn:translate-x-12 group-hover/btn:opacity-0 whitespace-nowrap">
+            {/* Resting label */}
+            <span className="kcc-btn__label relative z-10 inline-block transition-all duration-300 group-hover/btn:translate-x-12 group-hover/btn:opacity-0 whitespace-nowrap">
                 {children}
             </span>
 
-            {/* Hover state — arrow + label slides in from right */}
-            <span className="absolute z-10 flex items-center gap-2 translate-x-12 opacity-0 transition-all duration-300 group-hover/btn:-translate-x-0 group-hover/btn:opacity-100 whitespace-nowrap">
+            {/* Hover label + arrow */}
+            <span className="kcc-btn__label absolute z-10 flex items-center gap-2 translate-x-12 opacity-0 transition-all duration-300 group-hover/btn:-translate-x-0 group-hover/btn:opacity-100 whitespace-nowrap">
                 {children}
                 <ArrowRight size={18} />
             </span>
 
-            {/* Blob fill — starts bottom-left corner, expands to fill on hover */}
+            {/* Blob */}
             <span
                 className={cn(
                     "absolute left-1 bottom-1 h-2 w-2 rounded-full transition-all duration-300 pointer-events-none",
