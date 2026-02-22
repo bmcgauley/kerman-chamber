@@ -69,6 +69,9 @@ export function validateSiteConfig(config) {
         if (!config.hero.ctaSecondary?.label || !config.hero.ctaSecondary?.href) {
             errors.push("siteConfig.hero.ctaSecondary must have { label, href }");
         }
+        if (!Array.isArray(config.hero.heroMorphPhrases) || config.hero.heroMorphPhrases.length < 2) {
+            errors.push("siteConfig.hero.heroMorphPhrases must be an array of at least 2 strings");
+        }
     }
 
     // ── Social block ────────────────────────────────────────────────────────────

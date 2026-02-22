@@ -50,6 +50,13 @@ export const siteConfig = {
     hero: {
         headline: "Where Kerman",
         headlineAccent: "Business Grows",
+        // 2.6-B: phrases that morph in the hero headline (edit freely for new clients)
+        heroMorphPhrases: [
+            "Business Grows",
+            "Community Thrives",
+            "Future Shines",
+            "Vision Lives",
+        ],
         subheadline:
             "Advocating for local businesses and fostering community prosperity since 1950.",
         ctaPrimary: { label: "Join the Chamber", href: "/members" },

@@ -1,5 +1,8 @@
-import Link from "next/link";
+"use client";
+
 import { siteConfig } from "@/config/site";
+import { KCCButton } from "@/components/KCCButton";
+import { GooeyText } from "@/components/ui/gooey-text-morphing";
 
 export default function Hero() {
     const { hero } = siteConfig;
@@ -19,24 +22,33 @@ export default function Hero() {
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 leading-tight max-w-4xl mx-auto drop-shadow-lg">
                     {hero.headline}{" "}
                     <br />
-                    <span className="text-accent">{hero.headlineAccent}</span>
+                    {/* 2.6-B: GooeyText morphing accent — phrases from siteConfig.hero.heroMorphPhrases */}
+                    <span className="relative inline-block">
+                        <GooeyText
+                            texts={hero.heroMorphPhrases}
+                            morphTime={1.5}
+                            cooldownTime={2.5}
+                            className="h-[1.2em] w-full"
+                            textClassName="text-accent font-display font-bold text-4xl md:text-6xl lg:text-7xl"
+                        />
+                        {/* Invisible spacer to reserve height while GooeyText renders absolutely */}
+                        <span className="invisible" aria-hidden="true">
+                            {hero.headlineAccent}
+                        </span>
+                    </span>
                 </h1>
                 <p className="text-lg md:text-xl text-white/90 font-light mb-10 max-w-2xl mx-auto tracking-wide">
                     {hero.subheadline}
                 </p>
+
+                {/* 2.6-A: KCCButton CTAs */}
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <Link
-                        href={hero.ctaPrimary.href}
-                        className="w-full sm:w-auto bg-accent hover:bg-accent-hover text-primary font-bold text-lg py-4 px-8 rounded-lg transition-all shadow-lg hover:shadow-accent-glow cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
-                    >
+                    <KCCButton variant="primary" href={hero.ctaPrimary.href}>
                         {hero.ctaPrimary.label}
-                    </Link>
-                    <Link
-                        href={hero.ctaSecondary.href}
-                        className="w-full sm:w-auto bg-transparent border-2 border-white hover:bg-white hover:text-primary text-white font-bold text-lg py-4 px-8 rounded-lg transition-all cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
-                    >
+                    </KCCButton>
+                    <KCCButton variant="outline" href={hero.ctaSecondary.href}>
                         {hero.ctaSecondary.label}
-                    </Link>
+                    </KCCButton>
                 </div>
             </div>
         </section>

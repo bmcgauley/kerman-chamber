@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { KCCButton } from "@/components/KCCButton";
 
 /**
  * CTASection — reusable navy call-to-action banner.
@@ -18,12 +18,12 @@ export default function CTASection({ headline, subtext, buttonLabel, href = "/me
                 {subtext && (
                     <p className="text-xl text-white/80 mb-10 font-light">{subtext}</p>
                 )}
-                <Link
-                    href={href}
-                    className="bg-accent hover:bg-accent-hover text-primary font-bold text-lg py-4 px-10 rounded-lg shadow-lg transition-transform hover:scale-105 inline-block cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
-                >
-                    {buttonLabel}
-                </Link>
+                {/* 2.6-A: KCCButton */}
+                <div className="flex justify-center">
+                    <KCCButton variant="primary" href={href}>
+                        {buttonLabel}
+                    </KCCButton>
+                </div>
             </div>
         </section>
     );

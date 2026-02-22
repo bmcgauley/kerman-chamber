@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { siteConfig } from "@/config/site";
+import { KCCButton } from "@/components/KCCButton";
 
 const navLinks = [
     { label: "Home", href: "/" },
@@ -51,8 +52,8 @@ export default function Header() {
                                     key={link.href}
                                     href={link.href}
                                     className={`text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm px-1 ${isActive
-                                            ? "text-accent border-b-2 border-accent pb-0.5"
-                                            : "text-white/90 hover:text-accent"
+                                        ? "text-accent border-b-2 border-accent pb-0.5"
+                                        : "text-white/90 hover:text-accent"
                                         }`}
                                 >
                                     {link.label}
@@ -61,14 +62,15 @@ export default function Header() {
                         })}
                     </nav>
 
-                    {/* Join CTA — Desktop */}
+                    {/* Join CTA — Desktop (2.6-A KCCButton) */}
                     <div className="hidden md:flex items-center">
-                        <Link
+                        <KCCButton
+                            variant="primary"
                             href="/members"
-                            className="bg-accent hover:bg-accent-hover text-primary font-bold py-2.5 px-6 rounded-lg transition-all transform hover:scale-105 shadow-md text-sm cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
+                            className="!text-sm !py-2.5 !px-5 !rounded-md"
                         >
                             Join Us
-                        </Link>
+                        </KCCButton>
                     </div>
 
                     {/* Mobile Hamburger */}
@@ -111,22 +113,23 @@ export default function Header() {
                                 href={link.href}
                                 onClick={() => setMobileOpen(false)}
                                 className={`text-base font-medium py-3 px-4 rounded-lg transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent ${isActive
-                                        ? "text-accent bg-white/10"
-                                        : "text-white/90 hover:text-accent hover:bg-white/5"
+                                    ? "text-accent bg-white/10"
+                                    : "text-white/90 hover:text-accent hover:bg-white/5"
                                     }`}
                             >
                                 {link.label}
                             </Link>
                         );
                     })}
+                    {/* Mobile Join CTA (2.6-A KCCButton) */}
                     <div className="pt-2 border-t border-white/10 mt-2">
-                        <Link
+                        <KCCButton
+                            variant="primary"
                             href="/members"
-                            onClick={() => setMobileOpen(false)}
-                            className="block w-full text-center bg-accent hover:bg-accent-hover text-primary font-bold py-3 px-6 rounded-lg transition-all text-sm cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
+                            className="w-full !text-sm !py-3 !px-6 !rounded-md"
                         >
                             Join Us
-                        </Link>
+                        </KCCButton>
                     </div>
                 </nav>
             </div>
