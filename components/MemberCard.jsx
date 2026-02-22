@@ -2,6 +2,8 @@
  * MemberCard — reusable card for member spotlight and directory.
  * Props: name, category, description, icon, tier (optional), phone (optional)
  */
+import { KCCButton } from "@/components/KCCButton";
+
 export default function MemberCard({ member, variant = "spotlight" }) {
     const { name, category, description, icon, tier, phone } = member;
 
@@ -39,6 +41,9 @@ export default function MemberCard({ member, variant = "spotlight" }) {
                         {phone}
                     </a>
                 )}
+                <KCCButton variant="outline-dark" href="#">
+                    View Profile
+                </KCCButton>
             </div>
         );
     }
@@ -52,9 +57,9 @@ export default function MemberCard({ member, variant = "spotlight" }) {
             <h3 className="text-lg font-bold text-primary font-display">{name}</h3>
             <p className="text-accent text-sm font-medium mb-4">{category}</p>
             <p className="text-slate-500 text-sm mb-4">{description}</p>
-            <a href="#" className="text-primary text-sm font-bold hover:underline cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm">
+            <KCCButton variant="outline-dark" href="#">
                 View Profile
-            </a>
+            </KCCButton>
         </div>
     );
 }

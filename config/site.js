@@ -11,7 +11,7 @@ export const siteConfig = {
     orgShortName: "Kerman Chamber",
     city: "Kerman",
     state: "CA",
-    tagline: "Where Kerman Business Grows",
+    tagline: "Where Business Grows",
     founded: "1950",
     memberCount: "200+",
     eventCount: "20+",
@@ -48,7 +48,7 @@ export const siteConfig = {
 
     // ─── Hero ────────────────────────────────────────────────────────────────────
     hero: {
-        headline: "Where Kerman",
+        headline: "Kerman. Where...",
         headlineAccent: "Business Grows",
         // 2.6-B: phrases that morph in the hero headline (edit freely for new clients)
         heroMorphPhrases: [

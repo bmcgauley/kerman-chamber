@@ -2,9 +2,12 @@
  * KCCButton — KCC-branded wrapper around the 21st.dev InteractiveHoverButton.
  *
  * Variants:
- *   primary  — gold background (#C8971A), navy text, navy hover-fill blob
- *   outline  — transparent bg, white border, white hover-fill blob (for dark bg usage)
- *   outline-dark — transparent bg, navy border, navy hover-fill blob (for light bg usage)
+ *   primary      — gold background, navy text, navy hover-fill blob
+ *   outline      — transparent bg, white border (for dark bg usage)
+ *   outline-dark — transparent bg, navy border (for light bg usage)
+ *
+ * IMPORTANT: Uses Tailwind named group `group/btn` so hover animation only
+ * fires when the BUTTON itself is hovered — not when a parent card is hovered.
  *
  * Usage:
  *   <KCCButton href="/members">Join Us</KCCButton>
@@ -30,22 +33,17 @@ type KCCButtonProps =
     | (KCCButtonBaseProps & { href: string; onClick?: never } & Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, "href">)
     | (KCCButtonBaseProps & { href?: never; onClick?: React.MouseEventHandler<HTMLButtonElement> } & Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "onClick">);
 
-const variantStyles: Record<KCCButtonVariant, { wrapper: string; blob: string; text: string }> = {
-    primary: {
-        wrapper: "border-accent bg-accent text-primary hover:text-white",
-        blob: "bg-primary group-hover:bg-primary",
-        text: "text-primary group-hover:text-white",
-    },
-    outline: {
-        wrapper: "border-white bg-transparent text-white hover:text-primary",
-        blob: "bg-white group-hover:bg-white",
-        text: "text-white group-hover:text-primary",
-    },
-    "outline-dark": {
-        wrapper: "border-primary bg-transparent text-primary hover:text-white",
-        blob: "bg-primary group-hover:bg-primary",
-        text: "text-primary group-hover:text-white",
-    },
+// blob and text values must NOT use group-hover — those are set inline with named group
+const variantWrapper: Record<KCCButtonVariant, string> = {
+    primary: "border-accent bg-accent text-primary",
+    outline: "border-white bg-transparent text-white",
+    "outline-dark": "border-primary bg-transparent text-primary",
+};
+
+const variantBlob: Record<KCCButtonVariant, string> = {
+    primary: "bg-primary",
+    outline: "bg-white",
+    "outline-dark": "bg-primary",
 };
 
 export function KCCButton({
@@ -55,25 +53,24 @@ export function KCCButton({
     href,
     ...props
 }: KCCButtonProps) {
-    const styles = variantStyles[variant];
-
     const inner = (
         <span
             className={cn(
-                "group relative flex items-center justify-center cursor-pointer overflow-hidden rounded-lg border font-bold transition-colors duration-300",
+                // Named group "btn" — hover only fires for THIS element, not parent cards
+                "group/btn relative flex items-center justify-center cursor-pointer overflow-hidden rounded-lg border-2 font-bold transition-colors duration-300",
                 "px-8 py-4 text-lg",
-                styles.wrapper,
+                variantWrapper[variant],
                 "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary",
                 className
             )}
         >
             {/* Resting label — slides right on hover */}
-            <span className="relative z-10 inline-block transition-all duration-300 group-hover:translate-x-12 group-hover:opacity-0 whitespace-nowrap">
+            <span className="relative z-10 inline-block transition-all duration-300 group-hover/btn:translate-x-12 group-hover/btn:opacity-0 whitespace-nowrap">
                 {children}
             </span>
 
             {/* Hover state — arrow + label slides in from right */}
-            <span className="absolute z-10 flex items-center gap-2 translate-x-12 opacity-0 transition-all duration-300 group-hover:-translate-x-0 group-hover:opacity-100 whitespace-nowrap">
+            <span className="absolute z-10 flex items-center gap-2 translate-x-12 opacity-0 transition-all duration-300 group-hover/btn:-translate-x-0 group-hover/btn:opacity-100 whitespace-nowrap">
                 {children}
                 <ArrowRight size={18} />
             </span>
@@ -82,8 +79,8 @@ export function KCCButton({
             <span
                 className={cn(
                     "absolute left-1 bottom-1 h-2 w-2 rounded-full transition-all duration-300 pointer-events-none",
-                    "group-hover:left-0 group-hover:bottom-0 group-hover:h-full group-hover:w-full group-hover:rounded-lg group-hover:scale-[1.1]",
-                    styles.blob
+                    "group-hover/btn:left-0 group-hover/btn:bottom-0 group-hover/btn:h-full group-hover/btn:w-full group-hover/btn:rounded-lg group-hover/btn:scale-[1.1]",
+                    variantBlob[variant]
                 )}
             />
         </span>

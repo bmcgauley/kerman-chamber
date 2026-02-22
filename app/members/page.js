@@ -154,7 +154,7 @@ export default function MembersPage() {
                                     ))}
                                 </ul>
                                 <KCCButton
-                                    variant={tier.highlight ? "primary" : "outline"}
+                                    variant={tier.highlight ? "primary" : "outline-dark"}
                                     href="/contact"
                                     className="w-full"
                                 >
