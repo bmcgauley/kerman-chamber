@@ -1,17 +1,22 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand colors */
-  --color-primary: #1A2E4A;
-  --color-primary-dark: #0f1d2e;
-  --color-accent: #C8971A;
+  /* Brand colors — KCC Royal Blue (Fabric Creations Royal Blue, est. Pantone 286 C) */
+  --color-primary: #3944BC;
+  --color-primary-dark: #2A3396;
+  --color-primary-light: #5A6AD4;
+  --color-accent: #C9A227;
   --color-accent-hover: #b07f10;
-  --color-bg-light: #F8F4EE;
+  --color-bg-light: #F9F8F6;
+
+  /* Text tokens */
+  --color-text-body: #1A1A2E;
+  --color-text-muted: #6B7280;
 
   /* Typography — references next/font CSS vars set in layout.js */
   --font-family-display: var(--font-playfair, "Playfair Display", Georgia, serif);
   --font-family-body: var(--font-inter, Inter, system-ui, sans-serif);
 
   /* Custom shadow */
-  --shadow-accent-glow: 0 4px 24px rgba(200, 151, 26, 0.25);
+  --shadow-accent-glow: 0 4px 24px rgba(201, 162, 39, 0.3);
 }
