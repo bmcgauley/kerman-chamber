@@ -2,6 +2,7 @@
 import { useState } from "react";
 import EventCard from "@/components/EventCard";
 import { siteConfig } from "@/config/site";
+import { KCCButton } from "@/components/KCCButton";
 
 const CATEGORIES = ["All", "Networking", "Community", "Business Education", "Annual"];
 
@@ -44,8 +45,8 @@ export default function EventsPage() {
                                 key={cat}
                                 onClick={() => setActiveCategory(cat)}
                                 className={`px-6 py-2 rounded-full font-medium text-sm transition-all flex-shrink-0 ${activeCategory === cat
-                                        ? "bg-accent text-primary font-bold shadow-md"
-                                        : "bg-primary text-white hover:bg-primary/80"
+                                    ? "bg-accent text-primary font-bold shadow-md"
+                                    : "bg-primary text-white hover:bg-primary/80"
                                     }`}
                             >
                                 {cat}
@@ -84,9 +85,9 @@ export default function EventsPage() {
                             event details for review by our team.
                         </p>
                     </div>
-                    <button className="flex-shrink-0 px-8 py-3 border-2 border-primary text-primary font-bold rounded-full hover:bg-primary hover:text-white transition-all">
+                    <KCCButton variant="outline-dark" href="/contact">
                         Submit Event
-                    </button>
+                    </KCCButton>
                 </div>
             </main>
         </>

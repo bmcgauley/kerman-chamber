@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
+import { KCCButton } from "@/components/KCCButton";
 
 export default function Footer() {
     const year = new Date().getFullYear();
@@ -135,12 +136,13 @@ export default function Footer() {
                                 placeholder="Email Address"
                                 className="bg-white/5 border border-white/20 rounded px-4 py-2 text-white text-sm focus:outline-none focus:border-accent"
                             />
-                            <button
+                            <KCCButton
                                 type="submit"
-                                className="bg-accent text-primary font-bold text-sm py-2 px-4 rounded hover:bg-accent-hover transition-colors"
+                                variant="primary"
+                                className="!py-2 !text-sm !rounded-md"
                             >
                                 Subscribe
-                            </button>
+                            </KCCButton>
                         </form>
                     </div>
                 </div>

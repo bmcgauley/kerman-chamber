@@ -19,25 +19,31 @@ export default function Hero() {
 
             {/* Content */}
             <div className="relative z-10 container mx-auto px-4 text-center">
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 leading-tight max-w-4xl mx-auto drop-shadow-lg">
-                    {hero.headline}{" "}
-                    <br />
-                    {/* 2.6-B: GooeyText morphing accent — phrases from siteConfig.hero.heroMorphPhrases */}
-                    <span className="relative inline-block">
-                        <GooeyText
-                            texts={hero.heroMorphPhrases}
-                            morphTime={1.5}
-                            cooldownTime={2.5}
-                            className="h-[1.2em] w-full"
-                            textClassName="text-accent font-display font-bold text-4xl md:text-6xl lg:text-7xl"
-                        />
-                        {/* Invisible spacer to reserve height while GooeyText renders absolutely */}
-                        <span className="invisible" aria-hidden="true">
-                            {hero.headlineAccent}
-                        </span>
+
+                {/* Static headline line */}
+                <div className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white leading-tight max-w-4xl mx-auto drop-shadow-lg">
+                    <span>{hero.headline}</span>
+                </div>
+
+                {/* 2.6-B: GooeyText morphing accent — separated below, with explicit min-height */}
+                <div className="relative min-h-[1.4em] flex items-center justify-center my-2">
+                    <GooeyText
+                        texts={hero.heroMorphPhrases}
+                        morphTime={1.5}
+                        cooldownTime={2.5}
+                        className="w-full"
+                        textClassName="text-accent font-display font-bold text-4xl md:text-6xl lg:text-7xl leading-tight"
+                    />
+                    {/* Invisible spacer to hold height */}
+                    <span
+                        className="invisible text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-tight"
+                        aria-hidden="true"
+                    >
+                        {hero.headlineAccent}
                     </span>
-                </h1>
-                <p className="text-lg md:text-xl text-white/90 font-light mb-10 max-w-2xl mx-auto tracking-wide">
+                </div>
+
+                <p className="text-lg md:text-xl text-white/90 font-light mb-10 max-w-2xl mx-auto tracking-wide mt-4">
                     {hero.subheadline}
                 </p>
 

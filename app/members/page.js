@@ -3,6 +3,7 @@ import { useState } from "react";
 import MemberCard from "@/components/MemberCard";
 import CTASection from "@/components/CTASection";
 import { siteConfig } from "@/config/site";
+import { KCCButton } from "@/components/KCCButton";
 
 export default function MembersPage() {
     const [search, setSearch] = useState("");
@@ -57,8 +58,8 @@ export default function MembersPage() {
                                 key={cat}
                                 onClick={() => setActiveCategory(cat)}
                                 className={`px-4 py-2 rounded-full text-sm font-medium flex-shrink-0 transition-all ${activeCategory === cat
-                                        ? "bg-primary text-white font-bold"
-                                        : "bg-white border border-slate-200 text-slate-600 hover:border-primary hover:text-primary"
+                                    ? "bg-primary text-white font-bold"
+                                    : "bg-white border border-slate-200 text-slate-600 hover:border-primary hover:text-primary"
                                     }`}
                             >
                                 {cat}
@@ -106,8 +107,8 @@ export default function MembersPage() {
                             <div
                                 key={tier.name}
                                 className={`relative flex flex-col rounded-2xl p-8 border-2 transition-all hover:-translate-y-1 hover:shadow-xl ${tier.highlight
-                                        ? "border-accent bg-primary text-white shadow-accent-glow"
-                                        : "border-slate-200 bg-white"
+                                    ? "border-accent bg-primary text-white shadow-accent-glow"
+                                    : "border-slate-200 bg-white"
                                     }`}
                             >
                                 {tier.highlight && (
@@ -152,15 +153,13 @@ export default function MembersPage() {
                                         </li>
                                     ))}
                                 </ul>
-                                <a
+                                <KCCButton
+                                    variant={tier.highlight ? "primary" : "outline"}
                                     href="/contact"
-                                    className={`w-full text-center font-bold py-3 rounded-lg transition-all ${tier.highlight
-                                            ? "bg-accent hover:bg-accent-hover text-primary"
-                                            : "bg-primary hover:bg-primary-dark text-white"
-                                        }`}
+                                    className="w-full"
                                 >
                                     {tier.cta}
-                                </a>
+                                </KCCButton>
                             </div>
                         ))}
                     </div>

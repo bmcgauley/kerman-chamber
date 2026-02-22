@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { siteConfig } from "@/config/site";
+import { KCCButton } from "@/components/KCCButton";
 
 export default function ContactPage() {
     const [form, setForm] = useState({ name: "", email: "", phone: "", subject: "General Inquiry", message: "" });
@@ -129,13 +130,14 @@ export default function ContactPage() {
                                             className="w-full rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 focus:border-accent focus:outline-none focus:bg-white transition-colors placeholder:text-slate-400 resize-none"
                                         />
                                     </label>
-                                    <button
+                                    <KCCButton
                                         type="submit"
-                                        className="inline-flex justify-center items-center gap-2 w-full sm:w-auto px-8 py-3.5 bg-accent hover:bg-accent-hover text-primary font-bold rounded-lg transition-all active:scale-95 shadow-md"
+                                        onClick={handleSubmit}
+                                        variant="primary"
+                                        className="!w-full sm:!w-auto"
                                     >
                                         Send Message
-                                        <span className="material-symbols-outlined text-xl">send</span>
-                                    </button>
+                                    </KCCButton>
                                 </form>
                             )}
                         </div>
@@ -249,12 +251,9 @@ export default function ContactPage() {
                                 Become a member of the {siteConfig.orgName} today and start growing your business with our community support.
                             </p>
                         </div>
-                        <a
-                            href="/members#join"
-                            className="flex-shrink-0 inline-flex items-center justify-center px-8 py-4 bg-accent hover:bg-accent-hover text-primary font-bold rounded-lg shadow-lg transition-all"
-                        >
+                        <KCCButton variant="primary" href="/members#join">
                             Membership Info
-                        </a>
+                        </KCCButton>
                     </div>
                 </div>
             </section>

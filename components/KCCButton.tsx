@@ -78,11 +78,11 @@ export function KCCButton({
                 <ArrowRight size={18} />
             </span>
 
-            {/* Blob fill */}
+            {/* Blob fill — starts bottom-left corner, expands to fill on hover */}
             <span
                 className={cn(
-                    "absolute left-[20%] top-[40%] h-2 w-2 rounded-lg transition-all duration-300",
-                    "group-hover:left-[0%] group-hover:top-[0%] group-hover:h-full group-hover:w-full group-hover:scale-[1.8]",
+                    "absolute left-1 bottom-1 h-2 w-2 rounded-full transition-all duration-300 pointer-events-none",
+                    "group-hover:left-0 group-hover:bottom-0 group-hover:h-full group-hover:w-full group-hover:rounded-lg group-hover:scale-[1.1]",
                     styles.blob
                 )}
             />
