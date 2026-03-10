@@ -260,9 +260,9 @@ export const siteConfig = {
         { year: "Today", title: "Present Day", description: "Serving over 200 businesses with advocacy, networking, and community investment." },
     ],
     coreValues: [
-        { icon: "campaign", title: "Advocacy", description: "We champion policies that protect and grow local businesses at every level of government." },
-        { icon: "school", title: "Education", description: "Workshops, seminars, and mentorship programs equip members with tools to succeed." },
         { icon: "groups", title: "Community", description: "A strong community is built one relationship at a time. We create those connections." },
+        { icon: "school", title: "Education", description: "Workshops, seminars, and mentorship programs equip members with tools to succeed." },
+        { icon: "campaign", title: "Advocacy", description: "We champion policies that protect and grow local businesses at every level of government." },
     ],
     boardMembers: [
         { name: "James Sterling", title: "President & CEO", image: "" },

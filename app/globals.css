@@ -2,11 +2,11 @@
 
 @theme {
   /* Brand colors — KCC Royal Blue (Fabric Creations Royal Blue, est. Pantone 286 C) */
-  --color-primary: #3944BC;
-  --color-primary-dark: #2A3396;
-  --color-primary-light: #5A6AD4;
-  --color-accent: #C9A227;
-  --color-accent-hover: #b07f10;
+  --color-primary: #0A3459;
+  --color-primary-dark: #082640;
+  --color-primary-light: #707F8C;
+  --color-accent: #D9B36C;
+  --color-accent-hover: #B5914E;
   --color-bg-light: #F9F8F6;
 
   /* Text tokens — 2.5-A1 */
